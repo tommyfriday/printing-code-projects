@@ -4,6 +4,10 @@ var myArray = [1,2,3,4];
 
 console.log(myArray);
 
+//define a function
+  function increment(myNUmber){
+    return myNUmber+1;
+  }
 
 
 
