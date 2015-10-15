@@ -1,3 +1,7 @@
+/*
+Tommy Payne
+The Martian book cover design homework for Printing Code Fall 2015
+*/
 
   var r = new Rune({
     container: "#canvas",
