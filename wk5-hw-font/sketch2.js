@@ -1,7 +1,13 @@
+/*
+Tommy Payne
+Generative Typography
+Font homework for Printing Code Fall 2015
+*/
+
 var r = new Rune({
   container: "#canvas",
-  width: 1000,
-  height: 600
+  width: 800,
+  height: 400
 });
 
 
@@ -72,12 +78,10 @@ var w1 = r.group(10, 10)
 
 
     var b = r.group(480, 140)
-      for (var i = 0; i < 36; i++){
+      for (var i = 0; i < 34; i++){
       // draw a circle at that x and y
-      r.line(originX, originY,
-      i*(Math.cos(Rune.radians(4)) * (circleRadius*0.2)),
-      i*(Math.cos(Rune.radians(4)) * circleRadius), b)
-        .move (250, 90)
+      r.line(originX, originY, 55 + i * 2, 20+i * 5, b)
+        .move (230, 90)
         .fill(false)
         .stroke('hsv', 23, 123, 123)
         .strokeWidth(1);
@@ -86,42 +90,11 @@ var w1 = r.group(10, 10)
     var b2 = r.group(480, 10)
       for (var i = 0; i < 36; i++){
       // draw a circle at that x and y
-      r.line(originX, originY,
-      i*(Math.cos(Rune.radians(14)) * circleRadius),
-      i*(Math.cos(Rune.radians(14)) * circleRadius), b2)
+      r.line(originX, originY,i * 5.8, i * 5.8, b2)
         .move (130, 300)
         .fill(false)
         .stroke(3, 123,223)
         .strokeWidth(1);
       }
-
-// draw an ellipse in the center of screen
-// r.circle(r.width / 2, r.height / 2, circleRadius)
-//   .fill('hsv', 100, 23, 88)
-//   .stroke(false)
-//
-// for (var j = 0; j < numLines; j++){
-//   // draw an ellipse on the edge of the other ellipse, on 45 degrees
-//   var x = Math.cos(Rune.radians(45)) * circleRadius;
-//   var y = Math.sin(Rune.radians(45)) * circleRadius;
-//   r.circle((r.width / 2) + x, (r.height/2) + y, 10)
-//     .fill(255);
-//
-//     for (var i = 0; i < 360; i++){
-//     // draw a circle at that x and y
-//     r.line(x, y, i*2, i*2)
-//       .move (100, 300)
-//       .fill(false)
-//       .stroke(3)
-//       .strokeWidth(1);
-//     }
-//   }
-
-// now find the x,y of the new point that is 300px and 45 degrees away from the center point
-// notice how we need to convert our degrees to radians with the radians() function
-// var x = Math.cos(Rune.radians(45)) * 300;
-// var y = Math.sin(Rune.radians(45)) * 300;
-
-
 
   r.draw();
