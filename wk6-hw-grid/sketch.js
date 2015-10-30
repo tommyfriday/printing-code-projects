@@ -19,20 +19,39 @@ var r = new Rune({
     // // a x,y 200,200 and font size 120.
     // var path = f.toPath("The Unbearable Lightness of Being", 25, 25, 18)
     //   .fill(25, 10, 0)
+/*r.text("9", 25, 400)
+            // .fill(120, Rune.random(100, 255), Rune.random(2, 255))
+            .fill(Rune.random(200, 255), 12, Rune.random(2, 255), 0.40)
+            .stroke(false)
+            .fontSize(1034)
+            .textAlign("left")
+            .fontWeight("bold")
+            .fontFamily("Helvetica");
 
-r.text("The Unbearable Lightness of Being", 25, 40)
-      .fill(20, Rune.random(200, 255), Rune.random(2, 255), 0.20)
-      .stroke(false)
-      .fontSize(14)
-      .textAlign("left")
-      .fontFamily("Special Elite");
+r.text("4", -230, 700)
+            .fill(Rune.random(200, 255), 12, Rune.random(2, 255), 0.40)
+              .stroke(false)
+                .fontSize(1034)
+                .textAlign("left")
+                .fontWeight("bold")
+                .fontFamily("Helvetica");
+*/
+r.text("Modern Mathematics", 25, 100)
+                  // .fill(120, Rune.random(100, 255), Rune.random(2, 255))
+                  .fill(0)
+                  .stroke(false)
+                  .fontSize(34)
+                  .textAlign("left")
+                  .fontWeight("bold")
+                  .fontFamily("Helvetica");
 
-r.text("Milan Kundera", 25, 60)
-            .fill(200)
+r.text("by Unknown", 25, 65)
+            .fill(0)
             .stroke(false)
             .fontSize(14)
             .textAlign("left")
-            .fontFamily("Special Elite")
+            .fontWeight("bold")
+            .fontFamily("Helvetica")
 
 var grid = r.grid({
     x: 25,
@@ -44,14 +63,14 @@ var grid = r.grid({
 });
 
 //triangle object looped thru to draw randomly on the grid
-for(var i = 0; i < 10; i++){
+for(var i = 0; i < 6; i++){
 
     var x = grid.vars.moduleWidth;
     var y = grid.vars.moduleHeight;
     var tri = r.triangle(0, 0,
       0,  (y+grid.vars.moduleHeight),
       (x + grid.vars.moduleWidth), (y+grid.vars.moduleHeight))
-      .fill(20, Rune.random(200, 255), Rune.random(2, 255), 0.20)
+      .fill(Rune.random(200, 255), 12, Rune.random(2, 255), 0.40)
       .stroke(false);
 
     var randomCol = Math.ceil(Rune.random(0,3));
@@ -60,7 +79,7 @@ for(var i = 0; i < 10; i++){
 }
 
 //rect object looped thru to draw randomly on the grid
-for(var i = 0; i < 4; i++){
+for(var i = 0; i < 3; i++){
 
     var x = grid.vars.moduleWidth;
     var y = grid.vars.moduleHeight;
@@ -79,6 +98,13 @@ var whiteTri = r.triangle(0, 0,
     .fill(255)
     .stroke(false);
     grid.add(whiteTri, 2, 5);
+
+    var whiteTri2 = r.triangle(0, 0,
+        0,  (y+grid.vars.moduleHeight)/2,
+        (x + grid.vars.moduleWidth)/2, (y+grid.vars.moduleHeight)/2)
+        .fill(255)
+        .stroke(false);
+        grid.add(whiteTri2, 4, 3);
 
 r.draw ();
 // });
