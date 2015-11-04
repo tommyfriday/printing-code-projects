@@ -10,32 +10,7 @@ var r = new Rune({
     // debug: true
   });
 
-  // // Create a new Rune.Font object
-  // var f = new Rune.Font("AlfaSlabOne-Regular.ttf");
-  //
-  // f.load(function(err) {
 
-    // Get a path of the text "Rune" from the font
-    // // a x,y 200,200 and font size 120.
-    // var path = f.toPath("The Unbearable Lightness of Being", 25, 25, 18)
-    //   .fill(25, 10, 0)
-/*r.text("9", 25, 400)
-            // .fill(120, Rune.random(100, 255), Rune.random(2, 255))
-            .fill(Rune.random(200, 255), 12, Rune.random(2, 255), 0.40)
-            .stroke(false)
-            .fontSize(1034)
-            .textAlign("left")
-            .fontWeight("bold")
-            .fontFamily("Helvetica");
-
-r.text("4", -230, 700)
-            .fill(Rune.random(200, 255), 12, Rune.random(2, 255), 0.40)
-              .stroke(false)
-                .fontSize(1034)
-                .textAlign("left")
-                .fontWeight("bold")
-                .fontFamily("Helvetica");
-*/
 r.text("Modern Mathematics", 25, 100)
                   // .fill(120, Rune.random(100, 255), Rune.random(2, 255))
                   .fill(0)
