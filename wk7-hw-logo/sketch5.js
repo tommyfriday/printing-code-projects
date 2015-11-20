@@ -29,11 +29,11 @@ r.text("bistro", 85, 535)
 
 var sinLength = 280;
 //path to draw top of iceberg
-var curly = r.path(130, 180)
+var curly = r.path(130, 185)
 
 for(var i = 0; i < sinLength; i++){
   var x = i;
-  curly.lineTo(i, (Math.sin(x/7)) * 8)
+  curly.lineTo(i, (Math.sin(x/8)) * 6)
   //the number inside the sin equation changes the x frequency
   //the number that multiplies at the end changes the Y height
 }
@@ -52,7 +52,7 @@ var bottom = r.path(130, 200)
 
   for (var j = 0; j < botSinLength; j++){ //must be uneven length in for loop for polygon to close
     var b = j;
-    bottom.lineTo(j, (Math.sin(b/7)) * 8)
+    bottom.lineTo(j, (Math.sin(b/8)) * 6)
     }
           bottom.lineTo(280, 6) //last point on zigzag
           bottom.lineTo(300, 45)
